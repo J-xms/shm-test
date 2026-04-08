@@ -69,7 +69,7 @@ int ubs_mem_share_memory_map_demo(const std::string& shared_name)
     std::mt19937 rng(std::random_device{}());
     const size_t str_len = 16;
     std::uniform_int_distribution<size_t> offset_dist(0, length - str_len - 1);
-    for (int sec = 0; sec < 120; ++sec) {
+    for (int sec = 0; sec < 120000; ++sec) {
         auto start_time = std::chrono::steady_clock::now();
         for (int i = 0; i < 10; ++i) {
             // 生成随机偏移量

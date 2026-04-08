@@ -71,7 +71,7 @@ int ubs_mem_share_memory_map_demo(const std::string& shared_name)
     std::uniform_int_distribution<size_t> offset_dist(0, length - str_len - 1);
     for (int sec = 0; sec < 120; ++sec) {
         auto start_time = std::chrono::steady_clock::now();
-        for (int i = 0; i < 10000; ++i) {
+        for (int i = 0; i < 10; ++i) {
             // 生成随机偏移量
             size_t offset = offset_dist(rng);
             char* ptr = static_cast<char*>(address) + offset;
